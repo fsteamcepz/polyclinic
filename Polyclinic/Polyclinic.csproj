@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71082458-B1A5-4343-8639-D5303C3E5B63}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Polyclinic</RootNamespace>
+    <AssemblyName>Polyclinic</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>netflix_original.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Schedule.Designer.cs">
+      <DependentUpon>Add_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateBase.cs" />
+    <Compile Include="DoctorIsConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorIsConfirmation.Designer.cs">
+      <DependentUpon>DoctorIsConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorIsPatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorIsPatients.Designer.cs">
+      <DependentUpon>DoctorIsPatients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorIsPersonalAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorIsPersonalAccount.Designer.cs">
+      <DependentUpon>DoctorIsPersonalAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorRegistration.Designer.cs">
+      <DependentUpon>DoctorRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindADoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindADoctor.Designer.cs">
+      <DependentUpon>FindADoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetAService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetAService.Designer.cs">
+      <DependentUpon>GetAService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="History_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History_Form.Designer.cs">
+      <DependentUpon>History_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MakeAnAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakeAnAppointment.Designer.cs">
+      <DependentUpon>MakeAnAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientRegistration.Designer.cs">
+      <DependentUpon>PatientRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient_Cringe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient_Cringe.Designer.cs">
+      <DependentUpon>Patient_Cringe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet141.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet141.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PatientIsPersonalAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientIsPersonalAccount.Designer.cs">
+      <DependentUpon>PatientIsPersonalAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionHistoryOfDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionHistoryOfDoctor.Designer.cs">
+      <DependentUpon>ReceptionHistoryOfDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleForTheWeek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScheduleForTheWeek.Designer.cs">
+      <DependentUpon>ScheduleForTheWeek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllDoctors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllDoctors.Designer.cs">
+      <DependentUpon>ViewAllDoctors.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add_Schedule.resx">
+      <DependentUpon>Add_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorIsConfirmation.resx">
+      <DependentUpon>DoctorIsConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorIsPatients.resx">
+      <DependentUpon>DoctorIsPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorIsPersonalAccount.resx">
+      <DependentUpon>DoctorIsPersonalAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorRegistration.resx">
+      <DependentUpon>DoctorRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindADoctor.resx">
+      <DependentUpon>FindADoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetAService.resx">
+      <DependentUpon>GetAService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History_Form.resx">
+      <DependentUpon>History_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakeAnAppointment.resx">
+      <DependentUpon>MakeAnAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientRegistration.resx">
+      <DependentUpon>PatientRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient_Cringe.resx">
+      <DependentUpon>Patient_Cringe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientIsPersonalAccount.resx">
+      <DependentUpon>PatientIsPersonalAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionHistoryOfDoctor.resx">
+      <DependentUpon>ReceptionHistoryOfDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleForTheWeek.resx">
+      <DependentUpon>ScheduleForTheWeek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllDoctors.resx">
+      <DependentUpon>ViewAllDoctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="PolyclinicDataSet.xsc">
+      <DependentUpon>PolyclinicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet.xss">
+      <DependentUpon>PolyclinicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet1.xsc">
+      <DependentUpon>PolyclinicDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet1.xss">
+      <DependentUpon>PolyclinicDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet10.xsc">
+      <DependentUpon>PolyclinicDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet10.xss">
+      <DependentUpon>PolyclinicDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet11.xsc">
+      <DependentUpon>PolyclinicDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet11.xss">
+      <DependentUpon>PolyclinicDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet12.xsc">
+      <DependentUpon>PolyclinicDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet12.xss">
+      <DependentUpon>PolyclinicDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet13.xsc">
+      <DependentUpon>PolyclinicDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet13.xss">
+      <DependentUpon>PolyclinicDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet141.xsc">
+      <DependentUpon>PolyclinicDataSet141.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet141.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet141.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet141.xss">
+      <DependentUpon>PolyclinicDataSet141.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet15.xsc">
+      <DependentUpon>PolyclinicDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet15.xss">
+      <DependentUpon>PolyclinicDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet16.xsc">
+      <DependentUpon>PolyclinicDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet16.xss">
+      <DependentUpon>PolyclinicDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet17.xsc">
+      <DependentUpon>PolyclinicDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet17.xss">
+      <DependentUpon>PolyclinicDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet18.xsc">
+      <DependentUpon>PolyclinicDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet18.xss">
+      <DependentUpon>PolyclinicDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet19.xsc">
+      <DependentUpon>PolyclinicDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet19.xss">
+      <DependentUpon>PolyclinicDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet2.xsc">
+      <DependentUpon>PolyclinicDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet2.xss">
+      <DependentUpon>PolyclinicDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet3.xsc">
+      <DependentUpon>PolyclinicDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet3.xss">
+      <DependentUpon>PolyclinicDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet4.xsc">
+      <DependentUpon>PolyclinicDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet4.xss">
+      <DependentUpon>PolyclinicDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet5.xsc">
+      <DependentUpon>PolyclinicDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet5.xss">
+      <DependentUpon>PolyclinicDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet6.xsc">
+      <DependentUpon>PolyclinicDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet6.xss">
+      <DependentUpon>PolyclinicDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet7.xsc">
+      <DependentUpon>PolyclinicDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet7.xss">
+      <DependentUpon>PolyclinicDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet8.xsc">
+      <DependentUpon>PolyclinicDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet8.xss">
+      <DependentUpon>PolyclinicDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet9.xsc">
+      <DependentUpon>PolyclinicDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet9.xss">
+      <DependentUpon>PolyclinicDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\iphone.ico" />
+    <Content Include="images\netflix_original.ico" />
+    <Content Include="netflix_original.ico" />
+    <Content Include="Resources\ava-2.jpg" />
+    <Content Include="Resources\ava-3.jpg" />
+    <Content Include="Resources\ava-4.jpg" />
+    <Content Include="Resources\ava-5.jpg" />
+    <Content Include="Resources\ava-6.jpg" />
+    <Content Include="Resources\ava-7.jpg" />
+    <Content Include="Resources\ava-8.jpg" />
+    <Content Include="Resources\ava.jpg" />
+    <Content Include="Resources\doctor.png" />
+    <None Include="Resources\icon-user.png" />
+    <Content Include="Resources\lock.png" />
+    <Content Include="Resources\login.png" />
+    <Content Include="Resources\patient.png" />
+    <Content Include="Resources\user.png" />
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
